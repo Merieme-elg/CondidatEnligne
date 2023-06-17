@@ -1,4 +1,4 @@
 # CondidatEnligne
 pour se connecter comme administrateur : 
-email :admin@example.gmail.com
+email :admin@example.com
 password : admin123
