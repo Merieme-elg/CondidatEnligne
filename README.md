@@ -18,7 +18,7 @@ La structure globale contiendra deux espaces :
  Backend : ASP.NET CORE MVC 
  BDD : SQL SERVER (ENTITY FRAMEORK Code First)
 
-##Architecture et structure du projet:
+## Architecture et structure du projet:
 Le projet utilise l'architecture MVC (Modèle-Vue-Contrôleur) pour organiser le code et séparer les préoccupations. Voici une brève description de chaque composant de l'architecture :
 
 ---------------Modèles (Models)---------------
@@ -41,7 +41,7 @@ Le dossier Controllers contient les classes de contrôleur pour différentes fon
 Le fichier Program.cs contient la configuration initiale de l'application, y compris la configuration des services et du pipeline de requêtes.
 Le fichier appsettings.json contient les paramètres de configuration de l'application, tels que les chaînes de connexion à la base de données.
 
-##Guide d'utilisation :
+## Guide d'utilisation :
 pour se connecter comme administrateur :  
 email :admin@example.com
 password : admin123
