@@ -1,0 +1,79 @@
+﻿<!DOCTYPE HTML>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta description="Formulaire d'inscription">
+</head>
+
+<body>
+
+<h1 >FORMULAIRE D'INSCRIPTION</h1>
+
+<p>Nous vous prions de remplir ce formulaire avec les informations demandées. tous les champs sont obligatoires. 
+    <em>Ces informations nous permettront de choisir le condidat</em>
+</p>
+<div class="row">
+    <div class="mx-auto col-10 col-md-8 col-lg-6">
+    <form action="Register" method="POST" enctype="multipart/form-data">
+        <fieldset>
+        <div class="form-group">
+            <label for="exampleInputPassword1" class="form-label mt-4">Nom</label>
+            <input type="text" class="form-control" id="exampleInputEmail1" name="Nom" placeholder="ex:ELNOM">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1" class="form-label mt-4">Prenom</label>
+            <input type="text" class="form-control" id="exampleInputEmail1" name="Prenom" placeholder="ex:Merieme">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1" class="form-label mt-4" >addresse E-mail </label>
+            <input type="email" name="Email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+            <small id="emailHelp" class="form-text text-muted">votre e-mail sera pas partager.</small>
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1" class="form-label mt-4">Numéro de téléphone</label>
+            <input type="number" name="Téléphone" class="form-control" id="exampleInputEmail1" placeholder="ex:0709000000">
+        </div>
+        <div class="form-group">
+            <label for="exampleSelect1" class="form-label mt-4">Niveau d’étude</label>
+            <select class="form-select" name="Niveau" id="exampleSelect1">
+                <option value="Bac+5">Master</option>
+                <option value="Bac+3">Licence</option>
+                <option value="Bac+2">DEUST/DUT/DEUG</option>
+                <option value="Bac">Bac</option>
+            </select>
+        </div>
+       
+        <div class="form-group">
+            <label for="exampleTextarea" class="form-label mt-4">Années d’expérience</label>
+            <input type="number" name="expérience" class="form-control" id="exampleInputEmail1" placeholder="ex:5">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1" class="form-label mt-4">Dernier employeur</label>
+            <input type="text" name="employeur" class="form-control" id="exampleInputEmail1" placeholder="ex:0709000000">
+        </div>
+
+        <div class="form-group">
+            <label for="formFile" class="form-label mt-4">Importer votre CV</label>
+            <input class="form-control" id="formFile" name="CV" type="file" accept="application/pdf, Image/*">
+        </div>
+
+        <fieldset class="form-group">
+             <div class="form-check">
+                <input class="form-check-input" type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked="">
+                <label class="form-check-label" for="optionsRadios1">
+                    j'ai lu et j'accepte les termes et conditions.
+                </label>
+            </div>
+            
+        </fieldset>
+            <div class="d-grid gap-2">
+                <button type="submit"  class="btn btn-lg btn-primary"> Postuler </button>
+            </div>
+        </fieldset>
+    </form>
+    </div>
+ </div>
+
+</body>
+</html>

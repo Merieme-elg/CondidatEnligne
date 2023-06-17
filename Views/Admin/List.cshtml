@@ -1,0 +1,102 @@
+﻿@model IEnumerable<Condidature.Models.Condidat>
+
+@{
+    ViewData["Title"] = "List";
+}
+
+<h1 class="text-center"> Liste des condidats </h1>
+
+
+@using (Html.BeginForm("Recherche", "Admin", FormMethod.Post))
+{   <div>
+        <label for="nom">Nom:</label>
+        <input class="form-control me-sm-2" name="nom" type="search" placeholder="Rechercher par nom">
+    </div>
+    <div class="form-group">
+        <label for="prenom">Prénom:</label>
+        <input class="form-control me-sm-2" name="prenom" type="search" placeholder="Rechercher par prenom">
+    </div>
+    <div class="form-group">
+        <label for="email">Email:</label>
+        <input class="form-control me-sm-2" name="email" type="search" placeholder="Rechercher par e-mail">
+    </div>
+    <button type="submit" class="btn btn-primary">Rechercher</button>
+}
+
+
+
+<table class="table table-hover" id="datatable">
+    <thead>
+        <tr>
+            <th scope="col">
+                @Html.DisplayNameFor(model => model.Nom)
+            </th>
+            <th scope="col">
+                @Html.DisplayNameFor(model => model.Prenom)
+            </th>
+            <th scope="col">
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th scope="col">
+                @Html.DisplayNameFor(model => model.Téléphone)
+            </th>
+            <th scope="col">
+                @Html.DisplayNameFor(model => model.Niveau)
+            </th>
+            <th scope="col">
+                @Html.DisplayNameFor(model => model.expérience)
+            </th>
+            <th scope="col">
+                @Html.DisplayNameFor(model => model.employeur)
+            </th>
+            <th scope="col">
+                @Html.DisplayNameFor(model => model.CV)
+            </th>
+            <th>
+                Supprimer
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+
+@foreach (var item in Model) {
+            <tr class="table-info">
+            <td>
+                @Html.DisplayFor(modelItem => item.Nom)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Prenom)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Téléphone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Niveau)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.expérience)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.employeur)
+            </td>
+            <td>              
+                    <a href="@Url.Action("CV", "AdminController", new { candidatureId = item.IdCondidat })" target="_blank" >Ouvrir CV</a>
+
+                   
+            </td>
+            <td>
+                   <button> 
+                       <a asp-action="Delete" asp-route-id="@item.IdCondidat"> X </a>
+                    </button>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+
+
+
+
